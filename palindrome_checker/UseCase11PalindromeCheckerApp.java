@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class NormalizedPalindrome {
+public class CaseInsensitivePalindrome {
 
     public static void main(String[] args) {
 
@@ -8,27 +8,28 @@ public class NormalizedPalindrome {
         System.out.print("Enter a sentence: ");
         String input = sc.nextLine();
 
-        // Normalize string
+        // Normalize the string
         input = input.replaceAll("\\s+", "").toLowerCase();
 
         boolean isPalindrome = true;
 
+        // Convert to character array
+        char[] arr = input.toCharArray();
+
         int left = 0;
-        int right = input.length() - 1;
+        int right = arr.length - 1;
 
-        // Compare characters
+        // Compare characters from both ends
         while (left < right) {
-
-            if (input.charAt(left) != input.charAt(right)) {
+            if (arr[left] != arr[right]) {
                 isPalindrome = false;
                 break;
             }
-
             left++;
             right--;
         }
 
-        // Output result
+        // Print result
         if (isPalindrome) {
             System.out.println("Palindrome (ignoring spaces and case)");
         } else {
