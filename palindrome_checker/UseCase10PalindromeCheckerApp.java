@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class NormalizedPalindrome {
+public class UseCase10PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
