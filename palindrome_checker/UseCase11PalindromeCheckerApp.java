@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CaseInsensitivePalindrome {
+public class UseCase11PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
